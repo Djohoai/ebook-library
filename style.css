@@ -1,0 +1,123 @@
+/* Styles Généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* Conteneur du livre converti en Flexbox */
+.livre {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #bdc3c7;
+    
+    /* Flexbox : Aligne l'image et le texte côte à côte */
+    display: flex;
+    gap: 20px; /* Espace entre l'image et le texte */
+    align-items: center; /* Centre verticalement */
+}
+
+/* Style des images de couverture */
+.couverture {
+    width: 100px; /* Fixe une largeur uniforme */
+    height: 150px; /* Fixe une hauteur uniforme */
+    object-fit: cover; /* Recadre proprement sans déformer */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur pour regrouper le texte à côté de l'image */
+.details-livre {
+    flex: 1; /* Prend tout l'espace restant */
+}
+
+/* Personnalisation par univers */
+.romance .livre { 
+    border-left-color: #ff7675; 
+}
+
+.thriller .livre { 
+    border-left-color: #2d3436; 
+}
+
+h3 { 
+    margin-top: 0; 
+    color: #2d3436; 
+}
+
+strong { 
+    color: #0984e3; 
+}
+
+/* Styles du Formulaire */
+.section-formulaire {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.groupe-champ {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.groupe-champ label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.groupe-champ input, 
+.groupe-champ select, 
+.groupe-champ textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.groupe-champ input:focus, 
+.groupe-champ select:focus, 
+.groupe-champ textarea:focus {
+    outline: none;
+    border-color: #0984e3;
+}
+
+button {
+    background-color: #00b894;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #00a884;
+}

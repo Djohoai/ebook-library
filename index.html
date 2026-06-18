@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Bibliothèque Numérique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Ma Bibliothèque Numérique</h1>
+
+    <!-- Zone où s'affichent les livres -->
+    <main id="bibliotheque">
+        <!-- Section Romance -->
+        <section class="categorie romance" id="categorie-romance">
+            <h2>💖 Romance</h2>
+            <div class="livre">
+                <img class="couverture" src="jamaisplus.jpeg" alt="Couverture Jamais plus">
+                <div class="details-livre">
+                    <h3>Jamais plus (It Ends With Us)</h3>
+                    <p><strong>Autrice :</strong> Colleen Hoover</p>
+                    <p>Une histoire d'amour intense, de résilience et de choix de vie difficiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Thriller -->
+        <section class="categorie thriller" id="categorie-thriller">
+            <h2>🖤 Thriller</h2>
+            <div class="livre">
+                <img class="couverture" src="housemaid.jpeg" alt="Couverture La Femme de ménage">
+                <div class="details-livre">
+                    <h3>La Femme de ménage (The Housemaid)</h3>
+                    <p><strong>Autrice :</strong> Freida McFadden</p>
+                    <p>Un thriller psychologique sombre et addictif avec un secret de famille terrifiant.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Nouveau : Formulaire d'ajout -->
+    <section class="section-formulaire">
+        <h2>📚 Ajouter un nouveau livre</h2>
+        <form id="formulaire-livre">
+            <div class="groupe-champ">
+                <label for="titre">Titre du livre :</label>
+                <input type="text" id="titre" required placeholder="Ex: Verity">
+            </div>
+
+            <div class="groupe-champ">
+                <label for="auteur">Auteur / Autrice :</label>
+                <input type="text" id="auteur" required placeholder="Ex: Colleen Hoover">
+            </div>
+
+            <div class="groupe-champ">
+                <label for="genre">Genre :</label>
+                <select id="genre" required>
+                    <option value="romance">Romance 💖</option>
+                    <option value="thriller">Thriller 🖤</option>
+                </select>
+            </div>
+
+            <div class="groupe-champ">
+                <label for="description">Résumé / Description :</label>
+                <textarea id="description" rows="3" required placeholder="De quoi parle ce livre ?"></textarea>
+            </div>
+
+            <div class="groupe-champ">
+                <label for="couverture-url">Lien de l'image de couverture (URL) :</label>
+                <input type="url" id="couverture-url" placeholder="Laisse vide pour une image par défaut">
+            </div>
+
+            <button type="submit">Ajouter à ma bibliothèque</button>
+        </form>
+    </section>
+
+    <!-- Cette ligne magique relie ton fichier HTML à ton script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
